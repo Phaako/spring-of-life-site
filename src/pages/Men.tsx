@@ -5,28 +5,25 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Hammer, Users, Trophy } from 'lucide-react';
 import menMinistry from '@/assets/men-ministry.jpg';
+import menConstruction from '@/assets/men-construction.jpg';
+import menRetreat from '@/assets/men-retreat.jpg';
 
 const Men = () => {
   const carouselImages = [
     {
       src: menMinistry,
-      alt: "Men's Fellowship",
-      caption: "Men's BBQ fellowship and discussion"
+      alt: "Men's Fellowship BBQ",
+      caption: "Men's BBQ fellowship - Building brotherhood over good food and conversation"
     },
     {
-      src: "/placeholder.svg",
-      alt: "Men's Retreat",
-      caption: "Annual men's retreat in the wilderness"
+      src: menConstruction,
+      alt: "Men's Service Project",
+      caption: "Building homes for families in need - Serving our community together"
     },
     {
-      src: "/placeholder.svg",
-      alt: "Service Project",
-      caption: "Men building homes for the community"
-    },
-    {
-      src: "/placeholder.svg",
-      alt: "Sports Ministry",
-      caption: "Men's basketball league championship"
+      src: menRetreat,
+      alt: "Men's Wilderness Retreat", 
+      caption: "Annual men's retreat - Growing closer to God and each other in nature"
     }
   ];
 
@@ -59,35 +56,52 @@ const Men = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-r from-secondary to-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            Men's Ministry
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 animate-fade-in">
-            Building godly men who lead with integrity, serve with purpose, and love unconditionally
-          </p>
-        </div>
-      </section>
+      {/* Full-width Photo Carousel */}
+      <ImageCarousel 
+        images={carouselImages} 
+        fullWidth={true}
+        height="lg"
+        className="animate-fade-in"
+      />
 
-      {/* Photo Carousel */}
-      <section className="py-20 bg-muted/30">
+      {/* Ministry Description */}
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-foreground mb-4">
-              Men Making a Difference
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              See how our men are growing together and impacting the community
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Men's Ministry
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-secondary to-primary rounded-full mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Building godly men who lead with integrity, serve with purpose, and love unconditionally
             </p>
           </div>
-          <ImageCarousel images={carouselImages} className="animate-fade-in" />
+          
+          <Card className="shadow-card">
+            <CardContent className="p-12">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  The Men's Ministry at Grace Community is committed to challenging and equipping 
+                  men to be spiritual leaders in their homes, workplaces, and communities. We believe 
+                  that God has called men to be men of character, courage, and compassion.
+                </p>
+                <p>
+                  Through authentic relationships, biblical teaching, and practical service opportunities, 
+                  we help men develop the tools they need to navigate life's challenges with wisdom 
+                  and strength that comes from God.
+                </p>
+                <p>
+                  Whether you're single, married, a father, or somewhere in between, you'll find a 
+                  brotherhood here that will encourage you to become the man God designed you to be.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
@@ -127,60 +141,35 @@ const Men = () => {
         </div>
       </section>
 
-      {/* Vision Statement */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-card animate-fade-in">
+      {/* Get Connected */}
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="shadow-card">
             <CardContent className="p-12">
-              <h2 className="font-serif text-4xl font-bold text-center text-foreground mb-8">
-                Raising Up Godly Men
+              <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
+                Join the Brotherhood
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  The Men's Ministry at Grace Community is committed to challenging and equipping 
-                  men to be spiritual leaders in their homes, workplaces, and communities. We believe 
-                  that God has called men to be men of character, courage, and compassion.
-                </p>
-                <p>
-                  Through authentic relationships, biblical teaching, and practical service opportunities, 
-                  we help men develop the tools they need to navigate life's challenges with wisdom 
-                  and strength that comes from God.
-                </p>
-                <p>
-                  Whether you're single, married, a father, or somewhere in between, you'll find a 
-                  brotherhood here that will encourage you to become the man God designed you to be.
-                </p>
-              </div>
-              <div className="text-center mt-8">
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Ready to connect with other men and grow in your walk with God? We'd love to have you join us!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="shadow-warm">
-                  Join the Brotherhood
+                  Join Men's Ministry
                 </Button>
+                <Button variant="outline" size="lg">
+                  Contact Men's Director
+                </Button>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Michael Davis - Men's Ministry Director
+                </p>
+                <p className="text-muted-foreground">
+                  Email: men@gracecommunity.org | Phone: (555) 123-4569
+                </p>
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-            Men's Ministry Leadership
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our men's ministry is led by dedicated men who are passionate about developing other men.
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg">
-              <strong>Michael Davis</strong> - Men's Ministry Director
-            </p>
-            <p className="text-muted-foreground">
-              Email: men@gracecommunity.org | Phone: (555) 123-4569
-            </p>
-            <Button variant="outline" size="lg">
-              Contact Men's Ministry
-            </Button>
-          </div>
         </div>
       </section>
     </Layout>

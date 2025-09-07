@@ -5,28 +5,31 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Book, Coffee, Heart, Calendar } from 'lucide-react';
 import womenMinistry from '@/assets/women-ministry.jpg';
+import womenRetreat from '@/assets/women-retreat.jpg';
+import womenConference from '@/assets/women-conference.jpg';
+import womenService from '@/assets/women-service.jpg';
 
 const Women = () => {
   const carouselImages = [
     {
       src: womenMinistry,
       alt: "Women's Bible Study",
-      caption: "Weekly women's bible study and fellowship"
+      caption: "Weekly women's bible study and fellowship - Growing together in God's Word"
     },
     {
-      src: "/placeholder.svg",
+      src: womenRetreat,
       alt: "Women's Retreat",
-      caption: "Annual women's retreat weekend"
+      caption: "Annual women's retreat - A time of renewal and spiritual refreshment"
     },
     {
-      src: "/placeholder.svg",
-      alt: "Mother's Day Event",
-      caption: "Special Mother's Day celebration"
+      src: womenConference,
+      alt: "Women's Conference", 
+      caption: "Inspiring conferences with guest speakers and worship"
     },
     {
-      src: "/placeholder.svg",
+      src: womenService,
       alt: "Community Service",
-      caption: "Women serving in the community"
+      caption: "Women serving in the community - Making a difference together"
     }
   ];
 
@@ -59,35 +62,53 @@ const Women = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-32 bg-gradient-to-r from-accent to-primary text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            Women's Ministry
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 animate-fade-in">
-            Empowering women to grow in faith, build community, and discover God's purpose
-          </p>
-        </div>
-      </section>
+      {/* Full-width Photo Carousel */}
+      <ImageCarousel 
+        images={carouselImages} 
+        fullWidth={true}
+        height="lg"
+        className="animate-fade-in"
+      />
 
-      {/* Photo Carousel */}
-      <section className="py-20 bg-muted/30">
+      {/* Ministry Description */}
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-foreground mb-4">
-              Women Growing Together
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              See how God is working through our women's ministry programs
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Women's Ministry
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-accent to-primary rounded-full mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              Empowering women to grow in faith, build authentic community, and discover God's unique purpose for their lives
             </p>
           </div>
-          <ImageCarousel images={carouselImages} className="animate-fade-in" />
+          
+          <Card className="shadow-card">
+            <CardContent className="p-12">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Grace Community's Women's Ministry exists to help women of all ages and life stages 
+                  develop a deeper relationship with Jesus Christ. We believe that when women are 
+                  spiritually strong, families and communities are transformed.
+                </p>
+                <p>
+                  Whether you're a new believer seeking to understand your faith, a seasoned Christian 
+                  looking to grow deeper, or someone exploring Christianity for the first time, 
+                  you'll find a welcoming place in our women's ministry.
+                </p>
+                <p>
+                  Through Bible study, fellowship, service opportunities, and mentoring relationships, 
+                  we encourage one another to live out God's calling on our lives with joy, 
+                  authenticity, and purpose.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
@@ -127,61 +148,35 @@ const Women = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-card animate-fade-in">
+      {/* Get Connected */}
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="shadow-card">
             <CardContent className="p-12">
-              <h2 className="font-serif text-4xl font-bold text-center text-foreground mb-8">
-                Our Heart for Women
+              <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
+                Join Our Women's Ministry
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Grace Community's Women's Ministry exists to help women of all ages and life stages 
-                  develop a deeper relationship with Jesus Christ. We believe that when women are 
-                  spiritually strong, families and communities are transformed.
-                </p>
-                <p>
-                  Whether you're a new believer seeking to understand your faith, a seasoned Christian 
-                  looking to grow deeper, or someone exploring Christianity for the first time, 
-                  you'll find a welcoming place in our women's ministry.
-                </p>
-                <p>
-                  Through Bible study, fellowship, service opportunities, and mentoring relationships, 
-                  we encourage one another to live out God's calling on our lives with joy, 
-                  authenticity, and purpose.
-                </p>
-              </div>
-              <div className="text-center mt-8">
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Ready to connect with other women and grow in your faith journey? We'd love to have you join us!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="shadow-warm">
                   Get Connected
                 </Button>
+                <Button variant="outline" size="lg">
+                  Contact Women's Ministry
+                </Button>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Lisa Thompson - Women's Ministry Director
+                </p>
+                <p className="text-muted-foreground">
+                  Email: women@gracecommunity.org | Phone: (555) 123-4568
+                </p>
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Leadership */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-            Women's Ministry Leadership
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our ministry is led by passionate women who love Jesus and desire to see other women flourish.
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg">
-              <strong>Lisa Thompson</strong> - Women's Ministry Director
-            </p>
-            <p className="text-muted-foreground">
-              Email: women@gracecommunity.org | Phone: (555) 123-4568
-            </p>
-            <Button variant="outline" size="lg">
-              Contact Women's Ministry
-            </Button>
-          </div>
         </div>
       </section>
     </Layout>

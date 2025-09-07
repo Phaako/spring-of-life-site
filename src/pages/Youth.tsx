@@ -5,28 +5,25 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Users, Calendar, Music, Heart } from 'lucide-react';
 import youthActivity from '@/assets/youth-activity.jpg';
+import youthAdventure from '@/assets/youth-adventure.jpg';
+import youthWorship from '@/assets/youth-worship.jpg';
 
 const Youth = () => {
   const carouselImages = [
     {
       src: youthActivity,
-      alt: "Youth Group Activities",
-      caption: "Youth fellowship and games night"
+      alt: "Youth Group Fellowship",
+      caption: "Youth fellowship and games night - Building friendships that last"
     },
     {
-      src: "/placeholder.svg",
-      alt: "Youth Worship",
-      caption: "Sunday youth worship service"
+      src: youthAdventure,
+      alt: "Youth Adventure Trip",
+      caption: "Annual adventure retreat - Growing in faith through outdoor challenges"
     },
     {
-      src: "/placeholder.svg",
-      alt: "Youth Retreat",
-      caption: "Annual youth retreat in the mountains"
-    },
-    {
-      src: "/placeholder.svg",
-      alt: "Community Service",
-      caption: "Youth community service project"
+      src: youthWorship,
+      alt: "Youth Worship Team",
+      caption: "Youth leading worship - Using their gifts to serve God and others"
     }
   ];
 
@@ -59,35 +56,53 @@ const Youth = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
-      <section className="relative py-32 hero-gradient text-primary-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            Youth Ministry
-          </h1>
-          <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 animate-fade-in">
-            A place for teens to grow in faith, build friendships, and discover their purpose
-          </p>
-        </div>
-      </section>
+      {/* Full-width Photo Carousel */}
+      <ImageCarousel 
+        images={carouselImages} 
+        fullWidth={true}
+        height="lg"
+        className="animate-fade-in"
+      />
 
-      {/* Photo Carousel */}
-      <section className="py-20 bg-muted/30">
+      {/* Ministry Description */}
+      <section className="py-20 bg-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="font-serif text-4xl font-bold text-foreground mb-4">
-              Our Youth in Action
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Take a look at some of our recent youth activities and events
+            <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6">
+              Youth Ministry
+            </h1>
+            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"></div>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              A place for teens to grow in faith, build lasting friendships, and discover their God-given purpose
             </p>
           </div>
-          <ImageCarousel images={carouselImages} className="animate-fade-in" />
+          
+          <Card className="shadow-card">
+            <CardContent className="p-12">
+              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Our Youth Ministry is designed to create a safe and fun environment where 
+                  teenagers can explore their faith, ask questions, and build lasting friendships. 
+                  We believe that every teen has unique gifts and potential that God wants to use.
+                </p>
+                <p>
+                  Through interactive Bible studies, engaging activities, and meaningful service 
+                  opportunities, we help young people develop a personal relationship with Jesus 
+                  Christ and equip them to make a positive impact in their schools and communities.
+                </p>
+                <p>
+                  Our youth leaders are passionate about walking alongside teenagers during these 
+                  formative years, providing mentorship, guidance, and support as they navigate 
+                  the challenges and opportunities of adolescence.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Programs Section */}
-      <section className="py-20 bg-background">
+      <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
@@ -127,61 +142,35 @@ const Youth = () => {
         </div>
       </section>
 
-      {/* About Youth Ministry */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-card animate-fade-in">
+      {/* Get Connected */}
+      <section className="py-20 bg-background">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="shadow-card">
             <CardContent className="p-12">
-              <h2 className="font-serif text-4xl font-bold text-center text-foreground mb-8">
-                About Our Youth Ministry
+              <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
+                Join Our Youth Group
               </h2>
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Our Youth Ministry is designed to create a safe and fun environment where 
-                  teenagers can explore their faith, ask questions, and build lasting friendships. 
-                  We believe that every teen has unique gifts and potential that God wants to use.
-                </p>
-                <p>
-                  Through interactive Bible studies, engaging activities, and meaningful service 
-                  opportunities, we help young people develop a personal relationship with Jesus 
-                  Christ and equip them to make a positive impact in their schools and communities.
-                </p>
-                <p>
-                  Our youth leaders are passionate about walking alongside teenagers during these 
-                  formative years, providing mentorship, guidance, and support as they navigate 
-                  the challenges and opportunities of adolescence.
-                </p>
-              </div>
-              <div className="text-center mt-8">
+              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+                Ready to be part of an amazing community of teens who are growing in faith together? Come check us out!
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="shadow-warm">
-                  Join Our Youth Group
+                  Join Youth Group
                 </Button>
+                <Button variant="outline" size="lg">
+                  Contact Youth Pastor
+                </Button>
+              </div>
+              <div className="mt-8 pt-8 border-t border-border">
+                <p className="text-lg font-semibold text-foreground mb-2">
+                  Pastor Sarah Johnson - Youth Pastor
+                </p>
+                <p className="text-muted-foreground">
+                  Email: youth@gracecommunity.org | Phone: (555) 123-4567
+                </p>
               </div>
             </CardContent>
           </Card>
-        </div>
-      </section>
-
-      {/* Contact Youth Pastor */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-            Questions About Youth Ministry?
-          </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Our youth pastor would love to connect with you and answer any questions about our programs.
-          </p>
-          <div className="space-y-4">
-            <p className="text-lg">
-              <strong>Pastor Sarah Johnson</strong> - Youth Pastor
-            </p>
-            <p className="text-muted-foreground">
-              Email: youth@gracecommunity.org | Phone: (555) 123-4567
-            </p>
-            <Button variant="outline" size="lg">
-              Contact Youth Pastor
-            </Button>
-          </div>
         </div>
       </section>
     </Layout>
