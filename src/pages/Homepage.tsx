@@ -1,16 +1,17 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Play, Calendar, Heart } from 'lucide-react';
+import { Play, Calendar, Heart, Book, Users, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import pastorPhoto from '@/assets/pastor-photo.jpg';
 
 const Homepage = () => {
   return (
     <Layout>
-      {/* Hero Section with Video Background */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-        {/* Background Video */}
-        <div className="absolute inset-0 z-0">
+      {/* Fullscreen Hero Section with Video Background */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Fullscreen Background Video */}
+        <div className="absolute inset-0 w-full h-full">
           <video
             autoPlay
             muted
@@ -21,147 +22,148 @@ const Homepage = () => {
           >
             <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 bg-black/50"></div>
+          {/* Dark overlay for better text readability */}
+          <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </div>
 
-        {/* Content Overlay */}
-        <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center text-white animate-fade-in-up">
-            <h1 className="font-serif text-5xl md:text-7xl font-bold mb-6">
-              Welcome to
-              <span className="block text-gradient">Grace Community</span>
-            </h1>
-            <p className="text-xl md:text-2xl mb-8 max-w-3xl mx-auto opacity-90">
-              A place where faith meets community, and every person is valued and loved
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="hero-gradient text-white shadow-glow hover:shadow-warm transition-slow"
-              >
-                <Calendar className="mr-2 h-5 w-5" />
-                Join Our Services
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                className="bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm"
-              >
-                <Play className="mr-2 h-5 w-5" />
-                Watch Live
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
-            <div className="w-1 h-3 bg-white/70 rounded-full mt-2"></div>
-          </div>
-        </div>
-      </section>
-
-      {/* Pastor's Welcome Section */}
-      <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Pastor Image */}
-            <div className="animate-fade-in">
-              <div className="relative">
+        {/* Semi-transparent Overlay Box */}
+        <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
+          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[80vh] overflow-hidden animate-fade-in-up">
+            <div className="grid lg:grid-cols-5 min-h-[60vh]">
+              
+              {/* Pastor's Picture - Left Side */}
+              <div className="lg:col-span-2 relative overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
                 <img
                   src={pastorPhoto}
                   alt="Pastor John Smith"
-                  className="w-full max-w-md mx-auto rounded-lg shadow-warm"
+                  className="w-full h-full object-cover object-center"
                 />
-                <div className="absolute -bottom-4 -right-4 bg-primary text-primary-foreground p-4 rounded-lg shadow-card">
-                  <Heart className="h-6 w-6" />
+                <div className="absolute bottom-4 left-4 text-white">
+                  <div className="bg-black/40 backdrop-blur-sm rounded-lg p-3">
+                    <p className="font-serif text-lg font-semibold">Pastor John Smith</p>
+                    <p className="text-sm opacity-90">Senior Pastor</p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Welcome Message */}
-            <div className="animate-slide-in-right">
-              <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-                A Message from Pastor John
-              </h2>
-              <div className="space-y-6 text-muted-foreground text-lg leading-relaxed">
-                <p>
-                  Welcome to Grace Community Church! Whether you're new to faith or have been 
-                  walking with God for years, we're honored to have you as part of our church family.
-                </p>
-                <p>
-                  Our mission is simple: to love God, love people, and serve our community with 
-                  the grace and compassion of Jesus Christ. We believe that church is not just 
-                  a place you go, but a family you belong to.
-                </p>
-                <p>
-                  I invite you to explore all that God has in store for you here at Grace Community. 
-                  Come as you are, and discover the joy of authentic community and genuine faith.
-                </p>
-              </div>
-              <div className="mt-8">
-                <p className="font-semibold text-foreground">Pastor John Smith</p>
-                <p className="text-muted-foreground">Senior Pastor</p>
+              {/* Scrollable Content - Right Side */}
+              <div className="lg:col-span-3 p-8 md:p-12 overflow-y-auto max-h-[80vh] lg:max-h-none">
+                <div className="text-white space-y-6">
+                  
+                  {/* Welcome Header */}
+                  <div className="text-center lg:text-left">
+                    <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+                      <span className="text-primary-glow">Welcome</span> to<br />
+                      Grace Community
+                    </h1>
+                    <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0 mb-6"></div>
+                  </div>
+
+                  {/* Pastor's Welcome Message */}
+                  <div className="space-y-4 text-lg leading-relaxed">
+                    <p className="text-white/90">
+                      <strong className="text-primary-glow">Dear Friends,</strong>
+                    </p>
+                    <p className="text-white/90">
+                      Whether you're searching for a church home, seeking to deepen your faith, 
+                      or simply curious about God's love, we're honored to welcome you to Grace Community Church.
+                    </p>
+                    <p className="text-white/90">
+                      For over 25 years, our church family has been a place where authentic relationships 
+                      are built, lives are transformed, and the community is served with compassion. 
+                      We believe that everyone has a story worth sharing and a purpose worth discovering.
+                    </p>
+                    <p className="text-white/90">
+                      Come as you are, and discover the joy of belonging to a family that celebrates 
+                      God's grace together. Your journey of faith matters to us, and we're excited 
+                      to walk alongside you.
+                    </p>
+                    <p className="text-primary-glow font-medium italic">
+                      "For where two or three gather in my name, there am I with them." - Matthew 18:20
+                    </p>
+                    <p className="text-white/90">
+                      <strong>Blessings,</strong><br />
+                      <span className="text-primary-glow font-semibold">Pastor John Smith</span>
+                    </p>
+                  </div>
+
+                  {/* Action Buttons */}
+                  <div className="pt-6 space-y-4">
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <Link to="/about">
+                        <Button 
+                          size="lg" 
+                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow transition-slow"
+                        >
+                          <Users className="mr-2 h-5 w-5" />
+                          Learn About Us
+                        </Button>
+                      </Link>
+                      <Link to="/sermons">
+                        <Button 
+                          size="lg" 
+                          variant="outline"
+                          className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm transition-slow"
+                        >
+                          <Play className="mr-2 h-5 w-5" />
+                          Watch Sermons
+                        </Button>
+                      </Link>
+                    </div>
+                    
+                    <div className="grid sm:grid-cols-2 gap-4">
+                      <Link to="/events">
+                        <Button 
+                          size="lg" 
+                          variant="outline"
+                          className="w-full bg-accent/20 text-white border-accent/50 hover:bg-accent/30 backdrop-blur-sm transition-slow"
+                        >
+                          <Calendar className="mr-2 h-5 w-5" />
+                          Upcoming Events
+                        </Button>
+                      </Link>
+                      <Link to="/donate">
+                        <Button 
+                          size="lg" 
+                          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-warm transition-slow"
+                        >
+                          <Heart className="mr-2 h-5 w-5" />
+                          Give & Support
+                        </Button>
+                      </Link>
+                    </div>
+
+                    {/* Service Times */}
+                    <div className="bg-white/5 backdrop-blur-sm rounded-xl p-6 mt-8 border border-white/10">
+                      <h3 className="font-serif text-xl font-semibold text-primary-glow mb-3">
+                        Join Us This Sunday
+                      </h3>
+                      <div className="space-y-2 text-white/90">
+                        <p className="flex justify-between">
+                          <span>Sunday Worship:</span>
+                          <span className="font-medium">9:00 AM & 11:00 AM</span>
+                        </p>
+                        <p className="flex justify-between">
+                          <span>Sunday School:</span>
+                          <span className="font-medium">10:00 AM</span>
+                        </p>
+                        <p className="flex justify-between">
+                          <span>Wednesday Prayer:</span>
+                          <span className="font-medium">7:00 PM</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
 
-      {/* Quick Links Section */}
-      <section className="py-20 bg-background">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-foreground mb-4">
-              Connect With Us
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Find your place in our church community through various ministries and programs
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Sunday Services",
-                description: "Join us every Sunday at 9:00 AM and 11:00 AM for inspiring worship and biblical teaching.",
-                icon: "🙏",
-                link: "/about"
-              },
-              {
-                title: "Connect Groups",
-                description: "Build meaningful relationships through our small group ministries for all ages.",
-                icon: "👥",
-                link: "/about"
-              },
-              {
-                title: "Community Outreach",
-                description: "Make a difference in our community through service projects and volunteer opportunities.",
-                icon: "❤️",
-                link: "/events"
-              }
-            ].map((item, index) => (
-              <div 
-                key={index}
-                className="bg-card p-8 rounded-lg shadow-card hover:shadow-warm transition-smooth group"
-              >
-                <div className="text-4xl mb-4">{item.icon}</div>
-                <h3 className="font-serif text-2xl font-semibold text-foreground mb-4 group-hover:text-primary transition-smooth">
-                  {item.title}
-                </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  {item.description}
-                </p>
-                <Button 
-                  variant="outline"
-                  className="group-hover:bg-primary group-hover:text-primary-foreground transition-smooth"
-                >
-                  Learn More
-                </Button>
-              </div>
-            ))}
-          </div>
+        {/* Subtle Scroll Indicator */}
+        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+          <ArrowRight className="h-6 w-6 rotate-90" />
         </div>
       </section>
     </Layout>
