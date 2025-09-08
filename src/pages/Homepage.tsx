@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
-import { Play, Calendar, Heart, Book, Users, ArrowRight } from 'lucide-react';
+import { Play, Calendar, Heart, Book, Users, ArrowRight, Cross, Church } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import pastorPhoto from '@/assets/pastor-photo.jpg';
@@ -28,14 +28,14 @@ const Homepage = () => {
           <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
         </div>
 
-        {/* Semi-transparent Overlay Box */}
+        {/* Semi-transparent Overlay Box - Warm Elegant Design */}
         <div className="absolute inset-0 flex items-center justify-center p-4 md:p-8">
-          <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl shadow-2xl max-w-6xl w-full max-h-[80vh] overflow-hidden animate-fade-in-up">
-            <div className="grid lg:grid-cols-5 min-h-[60vh]">
+          <div className="bg-white/15 backdrop-blur-xl border border-white/30 rounded-3xl shadow-elegant max-w-6xl w-full max-h-[85vh] overflow-hidden animate-fade-in-up">
+            <div className="grid lg:grid-cols-5 min-h-[65vh]">
               
-              {/* Pastor's Picture - Left Side */}
-              <div className="lg:col-span-2 relative overflow-hidden">
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
+              {/* Pastor's Picture - Left Side with Warm Overlay */}
+              <div className="lg:col-span-2 relative overflow-hidden rounded-l-3xl">
+                <div className="absolute inset-0 bg-gradient-elegant opacity-20"></div>
                 <img
                   src={pastorPhoto}
                   alt="Rev. Dr. Gideon Namyela Panka"
@@ -53,7 +53,7 @@ const Homepage = () => {
               <div className="lg:col-span-3 p-8 md:p-12 max-h-[80vh] lg:max-h-[80vh] overflow-y-scroll no-scrollbar">
                 <div className="text-white space-y-6">
                   
-                  {/* Welcome Header */}
+                  {/* Welcome Header with Faith Icons */}
                   <div className="text-center lg:text-left">
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                       <span className="text-primary-glow">Welcome</span> to<br />
@@ -62,10 +62,10 @@ const Homepage = () => {
                     <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0 mb-6"></div>
                   </div>
 
-                  {/* Pastor's Welcome Message */}
-                  <div className="space-y-4 text-lg leading-relaxed">
-                    <p className="text-white/90">
-                      <strong className="text-primary-glow">Dear Friends,</strong>
+                  {/* Pastor's Welcome Message - Elegant Typography */}
+                  <div className="space-y-6 text-lg leading-relaxed font-body">
+                    <p className="text-white/95">
+                      <strong className="bg-gradient-warm bg-clip-text text-transparent text-xl">Dear Friends,</strong>
                     </p>
                     <p className="text-white/90">
                       Whether you're searching for a church home, seeking to deepen your faith, 
@@ -86,15 +86,15 @@ const Homepage = () => {
                     </p>
                   </div>
 
-                  {/* Action Buttons */}
-                  <div className="pt-6 space-y-4">
-                    <div className="grid sm:grid-cols-2 gap-4">
+                  {/* Action Buttons - Warm Gradients with Rounded Edges */}
+                  <div className="pt-8 space-y-6">
+                    <div className="grid sm:grid-cols-2 gap-6">
                       <Link to="/about">
                         <Button 
                           size="lg" 
-                          className="w-full bg-primary hover:bg-primary/90 text-primary-foreground shadow-glow transition-slow"
+                          className="w-full bg-gradient-warm hover:shadow-elegant text-white rounded-2xl h-14 text-base font-medium transition-all duration-500 hover:-translate-y-1"
                         >
-                          <Users className="mr-2 h-5 w-5" />
+                          <Users className="mr-3 h-5 w-5" />
                           Learn About Us
                         </Button>
                       </Link>
@@ -102,31 +102,31 @@ const Homepage = () => {
                         <Button 
                           size="lg" 
                           variant="outline"
-                          className="w-full bg-white/10 text-white border-white/30 hover:bg-white/20 backdrop-blur-sm transition-slow"
+                          className="w-full bg-white/15 text-white border-white/40 hover:bg-white/25 backdrop-blur-lg rounded-2xl h-14 text-base font-medium transition-all duration-500 hover:-translate-y-1 hover:shadow-glow"
                         >
-                          <Play className="mr-2 h-5 w-5" />
+                          <Play className="mr-3 h-5 w-5" />
                           Watch Sermons
                         </Button>
                       </Link>
                     </div>
                     
-                    <div className="grid sm:grid-cols-2 gap-4">
+                    <div className="grid sm:grid-cols-2 gap-6">
                       <Link to="/events">
                         <Button 
                           size="lg" 
                           variant="outline"
-                          className="w-full bg-accent/20 text-white border-accent/50 hover:bg-accent/30 backdrop-blur-sm transition-slow"
+                          className="w-full bg-gradient-elegant/20 text-white border-primary/50 hover:bg-gradient-elegant/30 backdrop-blur-lg rounded-2xl h-14 text-base font-medium transition-all duration-500 hover:-translate-y-1 hover:shadow-warm"
                         >
-                          <Calendar className="mr-2 h-5 w-5" />
+                          <Calendar className="mr-3 h-5 w-5" />
                           Upcoming Events
                         </Button>
                       </Link>
                       <Link to="/donate">
                         <Button 
                           size="lg" 
-                          className="w-full bg-accent hover:bg-accent/90 text-accent-foreground shadow-warm transition-slow"
+                          className="w-full bg-gradient-elegant hover:shadow-warm text-secondary rounded-2xl h-14 text-base font-semibold transition-all duration-500 hover:-translate-y-1"
                         >
-                          <Heart className="mr-2 h-5 w-5" />
+                          <Heart className="mr-3 h-5 w-5" />
                           Give & Support
                         </Button>
                       </Link>

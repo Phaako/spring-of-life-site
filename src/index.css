@@ -8,59 +8,75 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* Base colors - warm and welcoming */
-    --background: 35 20% 98%;
-    --foreground: 215 25% 15%;
+    /* Base colors - warm beige and white */
+    --background: 45 25% 96%;
+    --foreground: 25 15% 15%;
 
     /* Card system */
     --card: 0 0% 100%;
-    --card-foreground: 215 25% 15%;
+    --card-foreground: 25 15% 15%;
 
     /* Popover system */
     --popover: 0 0% 100%;
-    --popover-foreground: 215 25% 15%;
+    --popover-foreground: 25 15% 15%;
 
-    /* Primary - Warm Golden Amber */
-    --primary: 38 85% 55%;
+    /* Primary - Soft Gold */
+    --primary: 45 75% 65%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 38 85% 65%;
+    --primary-glow: 45 85% 75%;
 
-    /* Secondary - Deep Navy Blue */
-    --secondary: 215 30% 25%;
+    /* Secondary - Deep Burgundy */
+    --secondary: 345 65% 35%;
     --secondary-foreground: 0 0% 100%;
 
-    /* Muted - Warm Light Gray */
-    --muted: 35 15% 94%;
-    --muted-foreground: 215 20% 45%;
+    /* Muted - Warm Beige */
+    --muted: 40 20% 90%;
+    --muted-foreground: 25 15% 45%;
 
-    /* Accent - Soft Coral */
-    --accent: 15 75% 65%;
-    --accent-foreground: 0 0% 100%;
+    /* Accent - Warm Beige */
+    --accent: 40 35% 85%;
+    --accent-foreground: 25 15% 15%;
 
     /* Destructive */
     --destructive: 0 75% 55%;
     --destructive-foreground: 0 0% 100%;
 
     /* Borders and inputs */
-    --border: 35 20% 88%;
-    --input: 35 20% 88%;
-    --ring: 38 85% 55%;
+    --border: 40 20% 88%;
+    --input: 40 20% 88%;
+    --ring: 45 75% 65%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
 
-    /* Custom church design tokens */
-    --primary-glow: 38 85% 65%;
-    --hero-overlay: 215 25% 15% / 0.8;
+    /* Custom church design tokens - warm elegance */
+    --primary-glow: 45 85% 75%;
+    --hero-overlay: 25 15% 15% / 0.7;
+    --warm-gold: 45 75% 65%;
+    --deep-burgundy: 345 65% 35%;
+    --warm-beige: 40 35% 85%;
+    --soft-white: 0 0% 98%;
     
-    /* Beautiful gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
-    --gradient-warm: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
-    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
+    /* Youth-specific design tokens */
+    --youth-navy: 220 100% 25%;
+    --youth-emerald: 160 85% 45%;
+    --youth-yellow: 52 100% 60%;
+    --youth-white: 0 0% 100%;
+    --gradient-youth: linear-gradient(135deg, hsl(var(--youth-navy)), hsl(var(--youth-emerald)));
+    --gradient-youth-accent: linear-gradient(45deg, hsl(var(--youth-yellow)), hsl(var(--youth-emerald)));
+    --shadow-youth: 0 10px 30px -10px hsl(var(--youth-navy) / 0.3);
+    --youth-pattern: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff10' fill-rule='evenodd'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20M10 10l10 10-10 10z'/%3E%3C/g%3E%3C/svg%3E");
     
-    /* Elegant shadows */
-    --shadow-warm: 0 10px 30px -10px hsl(var(--primary) / 0.3);
-    --shadow-card: 0 4px 20px -4px hsl(var(--primary) / 0.1);
-    --shadow-glow: 0 0 40px hsl(var(--primary-glow) / 0.4);
+    /* Beautiful warm gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(var(--warm-gold)), hsl(var(--primary-glow)));
+    --gradient-warm: linear-gradient(135deg, hsl(var(--warm-gold)), hsl(var(--deep-burgundy)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-gold)) 0%, hsl(var(--deep-burgundy)) 100%);
+    --gradient-elegant: linear-gradient(45deg, hsl(var(--warm-gold)), hsl(var(--warm-beige)));
+    
+    /* Elegant soft shadows */
+    --shadow-warm: 0 8px 32px -8px hsl(var(--warm-gold) / 0.25);
+    --shadow-card: 0 4px 24px -4px hsl(var(--warm-gold) / 0.15);
+    --shadow-glow: 0 0 48px hsl(var(--primary-glow) / 0.3);
+    --shadow-elegant: 0 12px 48px -12px hsl(var(--deep-burgundy) / 0.2);
     
     /* Smooth transitions */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -195,6 +211,17 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out;
   }
@@ -205,5 +232,9 @@ All colors MUST be HSL.
   
   .animate-slide-in-right {
     animation: slide-in-right 0.6s ease-out;
+  }
+  
+  .animate-slide-in-up {
+    animation: slide-in-up 0.8s ease-out;
   }
 }
