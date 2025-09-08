@@ -4,6 +4,8 @@ import { Play, Calendar, Heart, Book, Users, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import pastorPhoto from '@/assets/pastor-photo.jpg';
+import solag_logo from '@/assets/solag_logo.mp4';
+import homepage from '@/assets/homepage.mp4';
 
 const Homepage = () => {
   return (
@@ -20,7 +22,7 @@ const Homepage = () => {
             className="w-full h-full object-cover"
             poster="/placeholder.svg"
           >
-            <source src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4" type="video/mp4" />
+            <source src={homepage} type="video/mp4" />
           </video>
           {/* Dark overlay for better text readability */}
           <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/40 to-black/60"></div>
@@ -36,26 +38,26 @@ const Homepage = () => {
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20"></div>
                 <img
                   src={pastorPhoto}
-                  alt="Pastor John Smith"
+                  alt="Rev. Dr. Gideon Namyela Panka"
                   className="w-full h-full object-cover object-center"
                 />
                 <div className="absolute bottom-4 left-4 text-white">
                   <div className="bg-black/40 backdrop-blur-sm rounded-lg p-3">
-                    <p className="font-serif text-lg font-semibold">Pastor John Smith</p>
+                    <p className="font-serif text-lg font-semibold">Rev. Dr. Gideon Namyela Panka</p>
                     <p className="text-sm opacity-90">Senior Pastor</p>
                   </div>
                 </div>
               </div>
 
               {/* Scrollable Content - Right Side */}
-              <div className="lg:col-span-3 p-8 md:p-12 overflow-y-auto max-h-[80vh] lg:max-h-none">
+              <div className="lg:col-span-3 p-8 md:p-12 max-h-[80vh] lg:max-h-[80vh] overflow-y-scroll no-scrollbar">
                 <div className="text-white space-y-6">
                   
                   {/* Welcome Header */}
                   <div className="text-center lg:text-left">
                     <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4">
                       <span className="text-primary-glow">Welcome</span> to<br />
-                      Grace Community
+                      Spring of Life AG
                     </h1>
                     <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto lg:mx-0 mb-6"></div>
                   </div>
@@ -67,13 +69,9 @@ const Homepage = () => {
                     </p>
                     <p className="text-white/90">
                       Whether you're searching for a church home, seeking to deepen your faith, 
-                      or simply curious about God's love, we're honored to welcome you to Grace Community Church.
+                      or simply curious about God's love, we're honored to welcome you to Spring of Life Assemblies of God Church.
                     </p>
-                    <p className="text-white/90">
-                      For over 25 years, our church family has been a place where authentic relationships 
-                      are built, lives are transformed, and the community is served with compassion. 
-                      We believe that everyone has a story worth sharing and a purpose worth discovering.
-                    </p>
+                  
                     <p className="text-white/90">
                       Come as you are, and discover the joy of belonging to a family that celebrates 
                       God's grace together. Your journey of faith matters to us, and we're excited 
@@ -84,7 +82,7 @@ const Homepage = () => {
                     </p>
                     <p className="text-white/90">
                       <strong>Blessings,</strong><br />
-                      <span className="text-primary-glow font-semibold">Pastor John Smith</span>
+                      <span className="text-primary-glow font-semibold">Rev. Dr Gideon Namyela Panka</span>
                     </p>
                   </div>
 
@@ -141,15 +139,15 @@ const Homepage = () => {
                       </h3>
                       <div className="space-y-2 text-white/90">
                         <p className="flex justify-between">
-                          <span>Sunday Worship:</span>
-                          <span className="font-medium">9:00 AM & 11:00 AM</span>
+                          <span>Abundant Sunday Service:</span>
+                          <span className="font-medium">9:00 AM</span>
                         </p>
                         <p className="flex justify-between">
-                          <span>Sunday School:</span>
-                          <span className="font-medium">10:00 AM</span>
+                          <span>Abundant Word Hour:</span>
+                          <span className="font-medium">7:00 PM</span>
                         </p>
                         <p className="flex justify-between">
-                          <span>Wednesday Prayer:</span>
+                          <span>Abundant Prayer hour:</span>
                           <span className="font-medium">7:00 PM</span>
                         </p>
                       </div>
@@ -162,9 +160,9 @@ const Homepage = () => {
         </div>
 
         {/* Subtle Scroll Indicator */}
-        <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
+        {/* <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 text-white/60 animate-bounce">
           <ArrowRight className="h-6 w-6 rotate-90" />
-        </div>
+        </div> */}
       </section>
     </Layout>
   );
