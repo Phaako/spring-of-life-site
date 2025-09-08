@@ -31,7 +31,7 @@ const Navigation = () => {
           <Link to="/" className="flex items-center space-x-2 group">
             <Church className="h-8 w-8 text-primary group-hover:text-primary-glow transition-smooth" />
             <span className="font-serif font-bold text-xl text-foreground">
-              Grace Community
+              Spring of Life AG
             </span>
           </Link>
 

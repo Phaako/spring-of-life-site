@@ -81,18 +81,22 @@ const Men = () => {
             <CardContent className="p-12">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  The Men's Ministry at Grace Community is committed to challenging and equipping 
-                  men to be spiritual leaders in their homes, workplaces, and communities. We believe 
-                  that God has called men to be men of character, courage, and compassion.
+                  The Men's Ministry of Spring of Life Assemblies of God is a fellowship of men committed to spiritual growth,
+                 brotherhood, and service. We seek to raise strong men of faith who lead their families, church, 
+                 and communities with integrity and courage.
                 </p>
                 <p>
-                  Through authentic relationships, biblical teaching, and practical service opportunities, 
-                  we help men develop the tools they need to navigate life's challenges with wisdom 
-                  and strength that comes from God.
+                What We Do:
+                
                 </p>
                 <p>
-                  Whether you're single, married, a father, or somewhere in between, you'll find a 
-                  brotherhood here that will encourage you to become the man God designed you to be.
+                  Bible Studies & Prayer Meetings – building strong foundations in Christ.
+                Fellowship & Support – creating a brotherhood of encouragement and accountability.
+                Community Outreach – serving through projects that meet real needs.
+                Leadership Development – equipping men to lead in church and society.
+                </p>
+                <p>
+                  Men! ....... Action! Action! ....... Now!
                 </p>
               </div>
             </CardContent>
@@ -108,7 +112,8 @@ const Men = () => {
               Ministry Programs
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Join other men in growing spiritually and making a lasting impact
+              Together, we grow as Christ-like men who make a lasting impact! 
+              
             </p>
           </div>
 

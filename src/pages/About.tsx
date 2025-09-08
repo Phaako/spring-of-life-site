@@ -34,7 +34,7 @@ const About = () => {
       <section className="relative py-32 bg-gradient-to-r from-primary to-accent text-primary-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-serif text-5xl md:text-6xl font-bold mb-6 animate-fade-in-up">
-            About Grace Community
+            About Spring of Life Assemblies of God
           </h1>
           <p className="text-xl md:text-2xl max-w-3xl mx-auto opacity-90 animate-fade-in">
             Discover our story, mission, and the heart behind our church family
@@ -165,11 +165,11 @@ const About = () => {
             <Card className="max-w-md mx-auto shadow-card">
               <CardContent className="p-8 text-center">
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
-                  Pastor John Smith
+                  Rev. Dr. Gideon Namyela Panka
                 </h3>
                 <p className="text-primary font-medium mb-4">Senior Pastor</p>
                 <p className="text-muted-foreground">
-                  Serving Grace Community since 1998, Pastor John brings wisdom, 
+                  Serving Spring of  life since 2015, Pastor John brings wisdom, 
                   compassion, and a heart for discipleship to our church family.
                 </p>
               </CardContent>
