@@ -37,7 +37,7 @@ const Youth = () => {
     {
       icon: Users,
       title: "Weekly Youth Group",
-      time: "Wednesdays 7:00 PM",
+      time: "Mondays 7:00 PM",
       description: "Games, fellowship, and biblical discussions for teens aged 13-18.",
       color: "youth-emerald"
     },
@@ -84,11 +84,12 @@ const Youth = () => {
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fade-in">
             <h1 className="font-youth text-6xl md:text-7xl font-black text-youth-white mb-6 tracking-tight">
-              YOUTH MINISTRY
+              Youth Ministry - Christ Ambassadors (C.A.)
             </h1>
             <div className="w-32 h-2 bg-youth-yellow rounded-full mx-auto mb-8 animate-pulse"></div>
             <p className="font-youth text-xl md:text-2xl text-youth-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
-              Where teens ignite their faith, build epic friendships, and discover their God-given superpowers! 🔥
+              We are the youth wing of Assemblies of God, passionate about knowing Christ and making Him known. As Christ Ambassadors (2 Corinthians 5:20),
+               we are committed to living as His representatives everywhere we go.🔥
             </p>
           </div>
         </div>
@@ -111,9 +112,10 @@ const Youth = () => {
                     </div>
                     
                     <p className="text-lg text-youth-navy/80 leading-relaxed font-medium">
-                      Our Youth Ministry is all about creating an <strong className="text-youth-emerald">EPIC</strong> environment where 
-                      teenagers can dive deep into their faith, ask the big questions, and form friendships that will last forever! 
-                      We believe every teen has incredible, unique gifts that God is excited to use.
+                                          To nurture and disciple young people in the Word of God.
+                      , equip them with spiritual, moral, and leadership values,
+                     mobilize the youth for evangelism, missions, and community service and 
+                      to provide a safe and empowering space for growth, fellowship, and creativity.
                     </p>
                     
                     <p className="text-lg text-youth-navy/80 leading-relaxed font-medium">
@@ -124,7 +126,7 @@ const Youth = () => {
                     
                     <div className="bg-gradient-youth-accent p-6 rounded-2xl">
                       <p className="text-youth-white font-semibold text-lg text-center">
-                        "Where faith meets fun and friendships are forged for eternity!" 🌟
+                        "As Christ Ambassadors, we are committed to living as true representatives of Christ—bold in our faith, passionate in service, and united in purpose." 🌟
                       </p>
                     </div>
                   </div>
@@ -137,7 +139,7 @@ const Youth = () => {
               <Card className="bg-youth-navy text-youth-white border-0 shadow-youth">
                 <CardContent className="p-6 text-center">
                   <Target className="w-12 h-12 text-youth-yellow mx-auto mb-4" />
-                  <h3 className="font-youth text-2xl font-bold mb-2">50+</h3>
+                  <h3 className="font-youth text-2xl font-bold mb-2">20+</h3>
                   <p className="font-youth text-youth-white/80 font-medium">Active Youth Members</p>
                 </CardContent>
               </Card>
@@ -162,10 +164,10 @@ const Youth = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 animate-fade-in">
             <h2 className="font-youth text-5xl font-black text-youth-navy mb-6 tracking-tight">
-              GET INVOLVED!
+              THE YOUTH ALIVE!
             </h2>
             <p className="font-youth text-xl text-youth-navy/70 max-w-2xl mx-auto font-semibold">
-              Discover amazing ways to level up your faith journey and connect with your squad! 🚀
+              We invite every young person to join us, grow with us, and become a shining light for Jesus in this generation! 🚀
             </p>
           </div>
 
