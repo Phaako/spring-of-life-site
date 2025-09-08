@@ -52,6 +52,16 @@ All colors MUST be HSL.
     --primary-glow: 38 85% 65%;
     --hero-overlay: 215 25% 15% / 0.8;
     
+    /* Youth-specific design tokens */
+    --youth-navy: 220 100% 25%;
+    --youth-emerald: 160 85% 45%;
+    --youth-yellow: 52 100% 60%;
+    --youth-white: 0 0% 100%;
+    --gradient-youth: linear-gradient(135deg, hsl(var(--youth-navy)), hsl(var(--youth-emerald)));
+    --gradient-youth-accent: linear-gradient(45deg, hsl(var(--youth-yellow)), hsl(var(--youth-emerald)));
+    --shadow-youth: 0 10px 30px -10px hsl(var(--youth-navy) / 0.3);
+    --youth-pattern: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff10' fill-rule='evenodd'%3E%3Cpath d='M20 20c0 11.046-8.954 20-20 20s-20-8.954-20-20 8.954-20 20-20 20 8.954 20 20M10 10l10 10-10 10z'/%3E%3C/g%3E%3C/svg%3E");
+    
     /* Beautiful gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-glow)));
     --gradient-warm: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
@@ -195,6 +205,17 @@ All colors MUST be HSL.
     }
   }
   
+  @keyframes slide-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
   .animate-fade-in-up {
     animation: fade-in-up 0.8s ease-out;
   }
@@ -205,5 +226,9 @@ All colors MUST be HSL.
   
   .animate-slide-in-right {
     animation: slide-in-right 0.6s ease-out;
+  }
+  
+  .animate-slide-in-up {
+    animation: slide-in-up 0.8s ease-out;
   }
 }

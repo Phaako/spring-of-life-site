@@ -3,7 +3,7 @@ import Layout from '@/components/Layout';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Users, Calendar, Music, Heart } from 'lucide-react';
+import { Users, Calendar, Music, Heart, Zap, Target, Star } from 'lucide-react';
 import youthActivity from '@/assets/youth-activity.jpg';
 import youthAdventure from '@/assets/youth-adventure.jpg';
 import youthWorship from '@/assets/youth-worship.jpg';
@@ -32,25 +32,29 @@ const Youth = () => {
       icon: Users,
       title: "Weekly Youth Group",
       time: "Wednesdays 7:00 PM",
-      description: "Games, fellowship, and biblical discussions for teens aged 13-18."
+      description: "Games, fellowship, and biblical discussions for teens aged 13-18.",
+      color: "youth-emerald"
     },
     {
       icon: Music,
       title: "Youth Worship Team",
       time: "Sundays 9:00 AM",
-      description: "Join our youth worship band and lead praise during services."
+      description: "Join our youth worship band and lead praise during services.",
+      color: "youth-yellow"
     },
     {
       icon: Calendar,
       title: "Youth Events",
       time: "Monthly",
-      description: "Special events, retreats, and community service opportunities."
+      description: "Special events, retreats, and community service opportunities.",
+      color: "youth-emerald"
     },
     {
       icon: Heart,
       title: "Mentorship Program",
       time: "Ongoing",
-      description: "Connect with adult mentors for guidance and spiritual growth."
+      description: "Connect with adult mentors for guidance and spiritual growth.",
+      color: "youth-yellow"
     }
   ];
 
@@ -64,52 +68,98 @@ const Youth = () => {
         className="animate-fade-in"
       />
 
-      {/* Ministry Description */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Youth Ministry
+      {/* Hero Section with Geometric Shapes */}
+      <section className="relative py-24 bg-gradient-youth overflow-hidden">
+        {/* Geometric Background Elements */}
+        <div className="absolute inset-0 bg-youth-pattern opacity-10"></div>
+        <div className="absolute top-0 left-0 w-64 h-64 bg-youth-yellow rounded-full -translate-x-32 -translate-y-32 opacity-20"></div>
+        <div className="absolute bottom-0 right-0 w-96 h-96 bg-youth-emerald rounded-full translate-x-48 translate-y-48 opacity-15"></div>
+        
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <div className="animate-fade-in">
+            <h1 className="font-youth text-6xl md:text-7xl font-black text-youth-white mb-6 tracking-tight">
+              YOUTH MINISTRY
             </h1>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"></div>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A place for teens to grow in faith, build lasting friendships, and discover their God-given purpose
+            <div className="w-32 h-2 bg-youth-yellow rounded-full mx-auto mb-8 animate-pulse"></div>
+            <p className="font-youth text-xl md:text-2xl text-youth-white/90 max-w-3xl mx-auto leading-relaxed font-medium">
+              Where teens ignite their faith, build epic friendships, and discover their God-given superpowers! 🔥
             </p>
           </div>
-          
-          <Card className="shadow-card">
-            <CardContent className="p-12">
-              <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Our Youth Ministry is designed to create a safe and fun environment where 
-                  teenagers can explore their faith, ask questions, and build lasting friendships. 
-                  We believe that every teen has unique gifts and potential that God wants to use.
-                </p>
-                <p>
-                  Through interactive Bible studies, engaging activities, and meaningful service 
-                  opportunities, we help young people develop a personal relationship with Jesus 
-                  Christ and equip them to make a positive impact in their schools and communities.
-                </p>
-                <p>
-                  Our youth leaders are passionate about walking alongside teenagers during these 
-                  formative years, providing mentorship, guidance, and support as they navigate 
-                  the challenges and opportunities of adolescence.
-                </p>
-              </div>
-            </CardContent>
-          </Card>
         </div>
       </section>
 
+      {/* Ministry Description with Vibrant Cards */}
+      <section className="py-20 bg-youth-white">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-3 gap-8 items-start">
+            {/* Main Content */}
+            <div className="lg:col-span-2">
+              <Card className="shadow-youth border-0 bg-gradient-to-br from-youth-white to-youth-emerald/5">
+                <CardContent className="p-10">
+                  <div className="space-y-8 font-youth">
+                    <div className="flex items-center gap-4 mb-6">
+                      <div className="w-12 h-12 bg-gradient-youth-accent rounded-full flex items-center justify-center">
+                        <Zap className="w-6 h-6 text-youth-white" />
+                      </div>
+                      <h2 className="font-youth text-3xl font-bold text-youth-navy">Our Mission</h2>
+                    </div>
+                    
+                    <p className="text-lg text-youth-navy/80 leading-relaxed font-medium">
+                      Our Youth Ministry is all about creating an <strong className="text-youth-emerald">EPIC</strong> environment where 
+                      teenagers can dive deep into their faith, ask the big questions, and form friendships that will last forever! 
+                      We believe every teen has incredible, unique gifts that God is excited to use.
+                    </p>
+                    
+                    <p className="text-lg text-youth-navy/80 leading-relaxed font-medium">
+                      Through mind-blowing Bible studies, adrenaline-pumping activities, and life-changing service 
+                      opportunities, we help young people build an unshakeable relationship with Jesus 
+                      and equip them to be world-changers in their schools and communities.
+                    </p>
+                    
+                    <div className="bg-gradient-youth-accent p-6 rounded-2xl">
+                      <p className="text-youth-white font-semibold text-lg text-center">
+                        "Where faith meets fun and friendships are forged for eternity!" 🌟
+                      </p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Side Stats */}
+            <div className="space-y-6">
+              <Card className="bg-youth-navy text-youth-white border-0 shadow-youth">
+                <CardContent className="p-6 text-center">
+                  <Target className="w-12 h-12 text-youth-yellow mx-auto mb-4" />
+                  <h3 className="font-youth text-2xl font-bold mb-2">50+</h3>
+                  <p className="font-youth text-youth-white/80 font-medium">Active Youth Members</p>
+                </CardContent>
+              </Card>
+              
+              <Card className="bg-youth-emerald text-youth-white border-0 shadow-youth">
+                <CardContent className="p-6 text-center">
+                  <Star className="w-12 h-12 text-youth-yellow mx-auto mb-4" />
+                  <h3 className="font-youth text-2xl font-bold mb-2">12</h3>
+                  <p className="font-youth text-youth-white/80 font-medium">Annual Events</p>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Geometric Divider */}
+      <div className="h-16 bg-gradient-to-r from-youth-yellow via-youth-emerald to-youth-navy"></div>
+
       {/* Programs Section */}
-      <section className="py-20 bg-muted/30">
+      <section className="py-20 bg-youth-navy/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-              Youth Programs
+          <div className="text-center mb-16 animate-fade-in">
+            <h2 className="font-youth text-5xl font-black text-youth-navy mb-6 tracking-tight">
+              GET INVOLVED!
             </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Discover the various ways teens can get involved and grow in their faith journey
+            <p className="font-youth text-xl text-youth-navy/70 max-w-2xl mx-auto font-semibold">
+              Discover amazing ways to level up your faith journey and connect with your squad! 🚀
             </p>
           </div>
 
@@ -117,20 +167,25 @@ const Youth = () => {
             {programs.map((program, index) => (
               <Card 
                 key={index}
-                className="shadow-card hover:shadow-warm transition-smooth group animate-fade-in"
+                className={`border-0 shadow-youth hover:shadow-xl transform hover:-translate-y-2 transition-all duration-300 group animate-slide-in-up bg-gradient-to-br from-youth-white to-${program.color}/10`}
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <CardContent className="p-8">
-                  <div className="flex items-start space-x-4">
-                    <div className="flex-shrink-0 w-12 h-12 bg-primary/10 text-primary rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-smooth">
-                      <program.icon className="h-6 w-6" />
+                <CardContent className="p-8 relative overflow-hidden">
+                  {/* Background Pattern */}
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-youth-pattern opacity-5 transform rotate-12"></div>
+                  
+                  <div className="flex items-start space-x-6">
+                    <div className={`flex-shrink-0 w-16 h-16 bg-${program.color} text-youth-white rounded-2xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                      <program.icon className="h-8 w-8" />
                     </div>
                     <div className="flex-1">
-                      <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                      <h3 className="font-youth text-2xl font-bold text-youth-navy mb-3 group-hover:text-youth-emerald transition-colors">
                         {program.title}
                       </h3>
-                      <p className="text-primary font-medium mb-3">{program.time}</p>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className={`text-${program.color} font-youth font-bold text-lg mb-4 uppercase tracking-wider`}>
+                        {program.time}
+                      </p>
+                      <p className="text-youth-navy/70 leading-relaxed font-youth font-medium">
                         {program.description}
                       </p>
                     </div>
@@ -142,32 +197,46 @@ const Youth = () => {
         </div>
       </section>
 
-      {/* Get Connected */}
-      <section className="py-20 bg-background">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Card className="shadow-card">
+      {/* Call to Action */}
+      <section className="py-20 bg-gradient-youth relative overflow-hidden">
+        {/* Geometric Elements */}
+        <div className="absolute top-0 left-0 w-full h-full bg-youth-pattern opacity-10"></div>
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-youth-yellow rounded-full opacity-20 animate-pulse"></div>
+        <div className="absolute -bottom-10 -left-10 w-60 h-60 bg-youth-emerald rounded-full opacity-15 animate-bounce"></div>
+        
+        <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <Card className="border-0 bg-youth-white/95 backdrop-blur shadow-2xl">
             <CardContent className="p-12">
-              <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
-                Join Our Youth Group
+              <h2 className="font-youth text-4xl font-black text-youth-navy mb-6 tracking-tight">
+                READY TO JOIN THE ADVENTURE? 🎯
               </h2>
-              <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Ready to be part of an amazing community of teens who are growing in faith together? Come check us out!
+              <p className="font-youth text-xl text-youth-navy/70 mb-10 max-w-2xl mx-auto font-semibold">
+                Come hang with an incredible community of teens who are leveling up their faith together!
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="shadow-warm">
-                  Join Youth Group
+              <div className="flex flex-col sm:flex-row gap-6 justify-center">
+                <Button 
+                  size="lg" 
+                  className="font-youth font-bold text-lg px-10 py-4 bg-gradient-youth-accent hover:bg-youth-emerald text-youth-white border-0 shadow-youth hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                >
+                  JOIN YOUTH GROUP 🚀
                 </Button>
-                <Button variant="outline" size="lg">
-                  Contact Youth Pastor
+                <Button 
+                  variant="outline" 
+                  size="lg"
+                  className="font-youth font-bold text-lg px-10 py-4 border-2 border-youth-navy text-youth-navy hover:bg-youth-navy hover:text-youth-white transition-all duration-300"
+                >
+                  MEET THE TEAM 👥
                 </Button>
               </div>
-              <div className="mt-8 pt-8 border-t border-border">
-                <p className="text-lg font-semibold text-foreground mb-2">
-                  Pastor Sarah Johnson - Youth Pastor
-                </p>
-                <p className="text-muted-foreground">
-                  Email: youth@gracecommunity.org | Phone: (555) 123-4567
-                </p>
+              <div className="mt-10 pt-8 border-t border-youth-navy/20">
+                <div className="bg-gradient-to-r from-youth-emerald to-youth-navy p-6 rounded-2xl text-youth-white">
+                  <p className="font-youth text-lg font-bold mb-2">
+                    Pastor Sarah Johnson - Youth Pastor 🌟
+                  </p>
+                  <p className="font-youth font-medium">
+                    📧 youth@gracecommunity.org | 📱 (555) 123-4567
+                  </p>
+                </div>
               </div>
             </CardContent>
           </Card>
