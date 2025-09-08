@@ -69,6 +69,7 @@ export default {
         'gradient-primary': 'var(--gradient-primary)',
         'gradient-warm': 'var(--gradient-warm)',
         'gradient-hero': 'var(--gradient-hero)',
+        'gradient-elegant': 'var(--gradient-elegant)',
         'gradient-youth': 'var(--gradient-youth)',
         'gradient-youth-accent': 'var(--gradient-youth-accent)',
         'youth-pattern': 'var(--youth-pattern)',
@@ -77,11 +78,13 @@ export default {
         'warm': 'var(--shadow-warm)',
         'card': 'var(--shadow-card)',
         'glow': 'var(--shadow-glow)',
+        'elegant': 'var(--shadow-elegant)',
         'youth': 'var(--shadow-youth)',
       },
       fontFamily: {
         'serif': ['Playfair Display', 'Georgia', 'serif'],
-        'sans': ['Inter', 'system-ui', 'sans-serif'],
+        'sans': ['Open Sans', 'system-ui', 'sans-serif'],
+        'body': ['Open Sans', 'system-ui', 'sans-serif'],
         'youth': ['Poppins', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
