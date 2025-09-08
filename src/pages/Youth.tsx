@@ -7,6 +7,7 @@ import { Users, Calendar, Music, Heart } from 'lucide-react';
 import youthActivity from '@/assets/youth-activity.jpg';
 import youthAdventure from '@/assets/youth-adventure.jpg';
 import youthWorship from '@/assets/youth-worship.jpg';
+import youth from '@/assets/youth.jpg';
 
 const Youth = () => {
   const carouselImages = [
@@ -24,6 +25,11 @@ const Youth = () => {
       src: youthWorship,
       alt: "Youth Worship Team",
       caption: "Youth leading worship - Using their gifts to serve God and others"
+    },
+    {
+      src: youth,
+      alt: "victory at bible quiz 2025",
+      caption: "SoLAG youth emerge 2nd at the Tamale West district bible Quiz Competition"
     }
   ];
 
@@ -31,14 +37,14 @@ const Youth = () => {
     {
       icon: Users,
       title: "Weekly Youth Group",
-      time: "Wednesdays 7:00 PM",
+      time: "Mondays 7:00 PM",
       description: "Games, fellowship, and biblical discussions for teens aged 13-18."
     },
     {
       icon: Music,
-      title: "Youth Worship Team",
+      title: "Youth Drama Team",
       time: "Sundays 9:00 AM",
-      description: "Join our youth worship band and lead praise during services."
+      description: "Join our youth drama band and tell stories, deliver messages through plays and choreography."
     },
     {
       icon: Calendar,
@@ -69,11 +75,12 @@ const Youth = () => {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h1 className="font-serif text-5xl md:text-6xl font-bold text-foreground mb-6">
-              Youth Ministry
+              Youth Ministry – Christ Ambassadors (C.A.)
             </h1>
             <div className="w-24 h-1 bg-gradient-to-r from-primary to-accent rounded-full mx-auto mb-8"></div>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              A place for teens to grow in faith, build lasting friendships, and discover their God-given purpose
+              We are the youth wing of Assemblies of God, passionate about knowing Christ and making Him known. As Christ Ambassadors (2 Corinthians 5:20), 
+              we are committed to living as His representatives everywhere we go.
             </p>
           </div>
           
@@ -81,14 +88,21 @@ const Youth = () => {
             <CardContent className="p-12">
               <div className="space-y-6 text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  Our Youth Ministry is designed to create a safe and fun environment where 
-                  teenagers can explore their faith, ask questions, and build lasting friendships. 
-                  We believe that every teen has unique gifts and potential that God wants to use.
+                 Our Mission:
+                  To raise a generation of Spirit-filled, Christ-centered leaders who shine as lights in their world.
+                              
                 </p>
                 <p>
-                  Through interactive Bible studies, engaging activities, and meaningful service 
-                  opportunities, we help young people develop a personal relationship with Jesus 
-                  Christ and equip them to make a positive impact in their schools and communities.
+                  What We Do:
+                  
+                </p>
+                <p>
+                  Weekly Youth Services & Bible Studies- building a strong foundation in God's Word.
+                    Camps, Retreats & Rallies- moments of encounter, fellowship, and revival.
+                    Evangelism & Outreach- taking the gospel to schools, communities, and beyond.
+                    Leadership & Mentorship Programs- grooming tomorrow's church and national leaders.
+                    Talent Development- music, drama, arts, and media to glorify God.
+                    Community Service- impacting lives through projects that show Christ's love.
                 </p>
                 <p>
                   Our youth leaders are passionate about walking alongside teenagers during these 
@@ -151,22 +165,22 @@ const Youth = () => {
                 Join Our Youth Group
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                Ready to be part of an amazing community of teens who are growing in faith together? Come check us out!
+                Join us – Grow with us – Shine for Christ!
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="shadow-warm">
                   Join Youth Group
                 </Button>
                 <Button variant="outline" size="lg">
-                  Contact Youth Pastor
+                  Contact Youth President
                 </Button>
               </div>
               <div className="mt-8 pt-8 border-t border-border">
                 <p className="text-lg font-semibold text-foreground mb-2">
-                  Pastor Sarah Johnson - Youth Pastor
+                  Daniel Sule - Youth President
                 </p>
                 <p className="text-muted-foreground">
-                  Email: youth@gracecommunity.org | Phone: (555) 123-4567
+                   Phone: (+233) 020-057-4232
                 </p>
               </div>
             </CardContent>
