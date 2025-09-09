@@ -1,8 +1,10 @@
 import React from 'react';
 import Layout from '@/components/Layout';
 import { Card, CardContent } from '@/components/ui/card';
-import { Users, Heart, Book, Globe } from 'lucide-react';
+import { Users, Heart, Book, Globe, HandHelpingIcon} from 'lucide-react';
+import { HandsPrayingIcon } from '@phosphor-icons/react';
 import churchInterior from '@/assets/church-interior.jpg';
+
 
 const About = () => {
   const values = [
@@ -25,6 +27,16 @@ const About = () => {
       icon: Globe,
       title: "Service",
       description: "Making a positive impact in our local community and around the world."
+    },
+    {
+      icon: HandHelpingIcon,
+      title: "Giving",
+      description: "Giving"
+    },
+    {
+     icon: HandsPrayingIcon,
+     title: "Prayer",
+     description: "Pray without ceasing. 1 Thessalonians 5:17."
     }
   ];
 
