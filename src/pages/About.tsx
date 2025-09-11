@@ -198,7 +198,7 @@ const About = () => {
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
                   Rev. Musah Salifu Taylor
                 </h3>
-                <p className="text-primary font-medium mb-4">Senior Pastor</p>
+                <p className="text-primary font-medium mb-4">Associate Pastor</p>
                 <p className="text-muted-foreground">
                   Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
                   compassion, and a heart for discipleship to our church family.
@@ -211,7 +211,7 @@ const About = () => {
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
                   Ps. Titus Abaah
                 </h3>
-                <p className="text-primary font-medium mb-4">Senior Pastor</p>
+                <p className="text-primary font-medium mb-4">Associate Pastor</p>
                 <p className="text-muted-foreground">
                   Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
                   compassion, and a heart for discipleship to our church family.

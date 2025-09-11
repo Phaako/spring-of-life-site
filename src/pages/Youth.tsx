@@ -4,10 +4,13 @@ import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Users, Calendar, Music, Heart, Zap, Target, Star } from 'lucide-react';
-import youthActivity from '@/assets/youth-activity.jpg';
-import youthAdventure from '@/assets/youth-adventure.jpg';
-import youthWorship from '@/assets/youth-worship.jpg';
+import youthActivity from '@/assets/y1.jpg';
+import youthAdventure from '@/assets/y2.jpg';
+import youthWorship from '@/assets/y3.jpg';
 import youth from '@/assets/youth.jpg';
+import y4 from '@/assets/y4.jpg';
+import y5 from '@/assets/y5.jpg';
+import y6 from '@/assets/y6.jpg'
 import { Link } from 'react-router-dom';
 
 const Youth = () => {
@@ -19,21 +22,26 @@ const Youth = () => {
     {
       src: youthActivity,
       alt: "Youth Group Fellowship",
-      caption: "Youth fellowship and games night - Building friendships that last"
+      caption: "youth day 2024 celebration"
     },
     {
       src: youthAdventure,
       alt: "Youth Adventure Trip",
-      caption: "Annual adventure retreat - Growing in faith through outdoor challenges"
+      caption: "youth day 2024 celebration"
     },
     {
       src: youthWorship,
       alt: "Youth Worship Team",
-      caption: "Youth leading worship - Using their gifts to serve God and others"
+      caption: "youth day 2023 celebration"
     },
     {
       src: youth,
       alt: "victory at bible quiz 2025",
+      caption: "SoLAG youth emerge 2nd at the Tamale West district bible Quiz Competition"
+    },
+    {
+      src: y4,
+      alt: "Youth",
       caption: "SoLAG youth emerge 2nd at the Tamale West district bible Quiz Competition"
     }
   ];
@@ -42,14 +50,14 @@ const Youth = () => {
     {
       icon: Users,
       title: "Weekly Youth Group",
-      time: "Mondays 7:00 PM",
+      time: "Mondays 6:30 PM",
       description: "Games, fellowship, and biblical discussions for teens aged 13-18.",
       color: "youth-emerald"
     },
     {
       icon: Music,
       title: "Youth Drama Team",
-      time: "Sundays 9:00 AM",
+      time: "Saturdays 9:00 AM",
       description: "Join our youth drama band and tell stories, deliver messages through plays and choreography.",
       color: "youth-yellow"
     },
