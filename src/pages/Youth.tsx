@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
@@ -8,8 +8,13 @@ import youthActivity from '@/assets/youth-activity.jpg';
 import youthAdventure from '@/assets/youth-adventure.jpg';
 import youthWorship from '@/assets/youth-worship.jpg';
 import youth from '@/assets/youth.jpg';
+import { Link } from 'react-router-dom';
 
 const Youth = () => {
+  const [activeTab, setActiveTab] = useState('');
+   const toggleTab = () => {
+    setActiveTab(activeTab === "youth" ? null : "youth");
+  };
   const carouselImages = [
     {
       src: youthActivity,
@@ -222,30 +227,34 @@ const Youth = () => {
                 Come hang with an incredible community of teens who are leveling up their faith together!
               </p>
               <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <Button 
-                  size="lg" 
-                  className="font-youth font-bold text-lg px-10 py-4 bg-gradient-youth-accent hover:bg-youth-emerald text-youth-white border-0 shadow-youth hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                <Link to={"https://forms.gle/L8ntEPv2ZFZpeSCp9"}
+                   
+                  className="font-youth font-bold text-lg px-10  py-3 bg-gradient-youth-accent hover:bg-youth-emerald rounded-lg text-youth-white border-0 shadow-youth hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
                 >
                   JOIN YOUTH GROUP 🚀
-                </Button>
+                </Link>
                 <Button 
                   variant="outline" 
                   size="lg"
+                  onClick={toggleTab}
                   className="font-youth font-bold text-lg px-10 py-4 border-2 border-youth-navy text-youth-navy hover:bg-youth-navy hover:text-youth-white transition-all duration-300"
                 >
-                  MEET THE TEAM 👥
+                 {activeTab === "youth" ? "HIDE TEAM 🙈" : "MEET THE TEAM 👥"}
                 </Button>
               </div>
-              <div className="mt-10 pt-8 border-t border-youth-navy/20">
+              {activeTab === 'youth' && (
+                 <div className="mt-10 pt-8 border-t border-youth-navy/20">
                 <div className="bg-gradient-to-r from-youth-emerald to-youth-navy p-6 rounded-2xl text-youth-white">
                   <p className="font-youth text-lg font-bold mb-2">
-                    Pastor Sarah Johnson - Youth Pastor 🌟
+                     Daniel Sule - Youth President 🌟
                   </p>
                   <p className="font-youth font-medium">
-                    📧 youth@gracecommunity.org | 📱 (555) 123-4567
+                    📧 solag1685@gmail.com | 📱 020 057 1027
                   </p>
                 </div>
               </div>
+              )}
+             
             </CardContent>
           </Card>
         </div>
