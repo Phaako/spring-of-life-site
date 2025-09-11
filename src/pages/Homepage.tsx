@@ -7,6 +7,11 @@ import Layout from '@/components/Layout';
 import pastorPhoto from '@/assets/pastor-photo.jpg';
 import solag_logo from '@/assets/solag_logo.mp4';
 import homepage from '@/assets/homepage.mp4';
+import youthlogo from '@/assets/youthlogo.jpg';
+import womenlogo from '@/assets/womenlogo.png';
+import childrenlogo from '@/assets/childrenlogo.jpg';
+import menlogo from '@/assets/menlogo.jpg';
+
 
 const Homepage = () => {
   return (
@@ -205,25 +210,25 @@ const Homepage = () => {
               {
                 title: "Youth Ministry",
                 description: "Teens building faith together through worship, fellowship, and fun activities.",
-                image: "/assets/youth-worship.jpg",
+                image: youthlogo,
                 link: "/youth"
               },
               {
                 title: "Women's Ministry",
                 description: "Women growing in faith through Bible study, prayer, and meaningful relationships.",
-                image: "/assets/women-conference.jpg",
+                image: womenlogo,
                 link: "/women"
               },
               {
                 title: "Men's Ministry",
                 description: "Men strengthening their walk with God through fellowship and service projects.",
-                image: "/assets/men-ministry.jpg",
+                image: menlogo,
                 link: "/men"
               },
               {
                 title: "Children's Ministry",
                 description: "Kids discovering God's love through engaging lessons, crafts, and activities.",
-                image: "/assets/children-sunday-school.jpg",
+                image: childrenlogo,
                 link: "/children"
               }
             ].map((ministry, index) => (
@@ -235,7 +240,8 @@ const Homepage = () => {
                 <CardContent className="p-0">
                   <div className="aspect-video bg-muted rounded-t-lg overflow-hidden">
                     <div className="w-full h-full bg-gradient-elegant/20 flex items-center justify-center">
-                      <Users className="h-12 w-12 text-primary/60" />
+                      {/* <Users className="h-12 w-12 text-primary/60" /> */}
+                      <img src= {ministry.image} className=" w-36 text-primary/60"/>
                     </div>
                   </div>
                   <div className="p-6">
@@ -354,9 +360,9 @@ const Homepage = () => {
           <div className="grid md:grid-cols-2 gap-8 mb-12">
             {[
               {
-                title: "Christmas Eve Service",
-                date: "December 24, 2024",
-                time: "6:00 PM & 8:00 PM",
+                title: "Annual Harvest",
+                date: "November 02, 2025",
+                time: "9:00 AM & 12:30 PM",
                 description: "Join us for a beautiful candlelight service celebrating the birth of our Savior.",
                 featured: true
               },
