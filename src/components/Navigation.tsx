@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Menu, X, Church } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
+
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
