@@ -3,7 +3,8 @@ import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Church } from 'lucide-react';
 import { cn } from '@/lib/utils';
-
+import Churchlogo from '@/assets/chlogo.svg';
+import Aglogo from '@/assets/aglogo.svg';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,10 +31,13 @@ const Navigation = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <Church className="h-8 w-8 text-primary group-hover:text-primary-glow transition-smooth" />
+          <img src= {Aglogo} className=" w-10 text-primary/60"/>
+            
+            {/* <Church className="h-8 w-8 text-primary group-hover:text-primary-glow transition-smooth" /> */}
             <span className="font-serif font-bold text-xl text-foreground">
               Spring of Life AG
             </span>
+            <img src= {Churchlogo} className=" w-10 text-primary/60"/>
           </Link>
 
           {/* Desktop Navigation */}
