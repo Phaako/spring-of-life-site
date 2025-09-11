@@ -4,6 +4,9 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Users, Heart, Book, Globe, HandHelpingIcon} from 'lucide-react';
 import { HandsPrayingIcon } from '@phosphor-icons/react';
 import churchInterior from '@/assets/church-interior.jpg';
+import pastor from '@/assets/pastor-photo.jpg';
+import musah from '@/assets/musah.jpg';
+import titus from '@/assets/titus.jpg';
 
 
 const About = () => {
@@ -173,19 +176,49 @@ const About = () => {
             Grace Community Church is led by a dedicated team of pastors and leaders 
             who are passionate about serving God and caring for our church family.
           </p>
-          <div className="mt-12">
-            <Card className="max-w-md mx-auto shadow-card">
-              <CardContent className="p-8 text-center">
+          <div className="mt-12 space-y-10">
+            <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-8 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={pastor} className='w-60 h-80 rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
                 <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
                   Rev. Dr. Gideon Namyela Panka
                 </h3>
                 <p className="text-primary font-medium mb-4">Senior Pastor</p>
                 <p className="text-muted-foreground">
-                  Serving Spring of  life since 2015, Pastor John brings wisdom, 
+                  Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
                   compassion, and a heart for discipleship to our church family.
                 </p>
               </CardContent>
             </Card>
+            
+            <div className='flex '> 
+              <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-8 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={musah} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Rev. Musah Salifu Taylor
+                </h3>
+                <p className="text-primary font-medium mb-4">Senior Pastor</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-8 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={titus} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Ps. Titus Abaah
+                </h3>
+                <p className="text-primary font-medium mb-4">Senior Pastor</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            </div>
           </div>
         </div>
       </section>
