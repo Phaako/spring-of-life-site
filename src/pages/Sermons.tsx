@@ -88,31 +88,208 @@ const Sermons = () => {
         </div>
       </section>
 
-      {/* Live Stream Info */}
+      {/* Live Stream Section */}
       <section className="py-12 bg-accent/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <Card className="shadow-card">
-            <CardContent className="p-8">
-              <div className="text-center">
-                <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
-                  Join Us Live Online
-                </h2>
-                <p className="text-lg text-muted-foreground mb-6">
-                  Can't make it to church? Join our live stream every Sunday at 9:00 AM and 11:00 AM
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" className="shadow-warm">
-                    <Play className="mr-2 h-5 w-5" />
-                    Watch Live Now
-                  </Button>
-                  <Button variant="outline" size="lg">
-                    <Calendar className="mr-2 h-5 w-5" />
-                    Set Reminder
-                  </Button>
-                </div>
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-3xl font-bold text-foreground mb-4">
+              Join Us Live Online
+            </h2>
+            <p className="text-lg text-muted-foreground mb-6">
+              Can't make it to church? Join our live stream every Sunday at 9:00 AM and 11:00 AM
+            </p>
+          </div>
+          
+          <Card className="shadow-card mb-8">
+            <CardContent className="p-6">
+              <div className="aspect-video bg-muted rounded-lg overflow-hidden">
+                <iframe
+                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F12345%2F&show_text=false&width=560&t=0"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 'none', overflow: 'hidden' }}
+                  scrolling="no"
+                  frameBorder="0"
+                  allowFullScreen={true}
+                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                  title="Live Stream"
+                />
               </div>
             </CardContent>
           </Card>
+          
+          <div className="text-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="shadow-warm">
+                <Tv className="mr-2 h-5 w-5" />
+                Watch Live Now
+              </Button>
+              <Button variant="outline" size="lg">
+                <Calendar className="mr-2 h-5 w-5" />
+                Set Reminder
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Past Sermon Videos */}
+      <section className="py-20 bg-background">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-serif text-4xl font-bold text-foreground mb-6">
+              Past Sermon Videos
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Watch previous sermons and be blessed by God's word
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Facebook Video Embed 1 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F67890%2F&show_text=false&width=560&t=0"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', overflow: 'hidden' }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    title="Walking in Faith, Not Fear"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  Walking in Faith, Not Fear
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Pastor John Smith • Nov 3, 2024
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* YouTube Video Embed 1 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="The Power of Community"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  The Power of Community
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Pastor Sarah Johnson • Oct 27, 2024
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Facebook Video Embed 2 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F54321%2F&show_text=false&width=560&t=0"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', overflow: 'hidden' }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    title="Generous Hearts, Generous Lives"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  Generous Hearts, Generous Lives
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Pastor John Smith • Oct 20, 2024
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* YouTube Video Embed 2 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Finding Purpose in Every Season"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  Finding Purpose in Every Season
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Dr. Maria Rodriguez • Oct 13, 2024
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* Facebook Video Embed 3 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F98765%2F&show_text=false&width=560&t=0"
+                    width="100%"
+                    height="100%"
+                    style={{ border: 'none', overflow: 'hidden' }}
+                    scrolling="no"
+                    frameBorder="0"
+                    allowFullScreen={true}
+                    allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                    title="Living in God's Grace"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  Living in God's Grace
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Pastor John Smith • Oct 6, 2024
+                </p>
+              </CardContent>
+            </Card>
+
+            {/* YouTube Video Embed 3 */}
+            <Card className="shadow-card hover:shadow-warm transition-smooth">
+              <CardContent className="p-4">
+                <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
+                  <iframe
+                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    width="100%"
+                    height="100%"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                    title="Hope in Difficult Times"
+                  />
+                </div>
+                <h3 className="font-serif text-lg font-semibold text-foreground mb-2">
+                  Hope in Difficult Times
+                </h3>
+                <p className="text-sm text-muted-foreground mb-3">
+                  Pastor Sarah Johnson • Sep 29, 2024
+                </p>
+              </CardContent>
+            </Card>
+          </div>
         </div>
       </section>
 
