@@ -104,7 +104,7 @@ const Sermons = () => {
             <CardContent className="p-6">
               <div className="aspect-video bg-muted rounded-lg overflow-hidden">
                 <iframe
-                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F12345%2F&show_text=false&width=560&t=0"
+                  src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSoLAG22%2Fvideos%2F1522499862332494%2F&show_text=false&width=560&t=0"
                   width="100%"
                   height="100%"
                   style={{ border: 'none', overflow: 'hidden' }}
@@ -151,7 +151,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F67890%2F&show_text=false&width=560&t=0"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1586960562142106%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     style={{ border: 'none', overflow: 'hidden' }}
@@ -176,7 +176,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.facebook.com/plugins/video.php?height=307&href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1082028183280820%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     frameBorder="0"
@@ -199,7 +199,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F54321%2F&show_text=false&width=560&t=0"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSoLAG22%2Fvideos%2F1451712058748042%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     style={{ border: 'none', overflow: 'hidden' }}
@@ -224,7 +224,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSoLAG22%2Fvideos%2F1892822887824945%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     frameBorder="0"
@@ -247,7 +247,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2Fyourchurch%2Fvideos%2F98765%2F&show_text=false&width=560&t=0"
+                    src="https://www.facebook.com/plugins/video.php?height=314&href=https%3A%2F%2Fwww.facebook.com%2FSoLAG22%2Fvideos%2F526306973251547%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     style={{ border: 'none', overflow: 'hidden' }}
@@ -272,7 +272,7 @@ const Sermons = () => {
               <CardContent className="p-4">
                 <div className="aspect-video bg-muted rounded-lg overflow-hidden mb-4">
                   <iframe
-                    src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                    src="https://www.facebook.com/plugins/video.php?height=315&href=https%3A%2F%2Fwww.facebook.com%2FSoLAG22%2Fvideos%2F1425906801613622%2F&show_text=false&width=560&t=0"
                     width="100%"
                     height="100%"
                     frameBorder="0"
