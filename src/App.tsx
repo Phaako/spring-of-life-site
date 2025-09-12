@@ -9,6 +9,7 @@ import Youth from "./pages/Youth";
 import Women from "./pages/Women";
 import Men from "./pages/Men";
 import Children from "./pages/Children";
+import Departments from "./pages/Departments";
 import Sermons from "./pages/Sermons";
 import Events from "./pages/Events";
 import Donate from "./pages/Donate";
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/women" element={<Women />} />
           <Route path="/men" element={<Men />} />
           <Route path="/children" element={<Children />} />
+          <Route path="/departments" element={<Departments />} />
           <Route path="/sermons" element={<Sermons />} />
           <Route path="/events" element={<Events />} />
           <Route path="/donate" element={<Donate />} />
