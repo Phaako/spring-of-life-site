@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
@@ -18,6 +18,19 @@ interface ImageCarouselProps {
 
 const ImageCarousel = ({ images, className, fullWidth = false, height = 'md' }: ImageCarouselProps) => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
+
+  // Auto-slide every 4 seconds
+  useEffect(() => {
+    intervalRef.current = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 4000);
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [images.length]);
 
   const previousImage = () => {
     setCurrentIndex((prevIndex) => 
@@ -50,28 +63,10 @@ const ImageCarousel = ({ images, className, fullWidth = false, height = 'md' }: 
         <img
           src={images[currentIndex].src}
           alt={images[currentIndex].alt}
-          className="w-full h-full object-cover transition-smooth"
+          className="w-full h-full object-contain transition-smooth bg-white/20"
         />
         
-        {/* Navigation Buttons */}
-        <div className="absolute inset-0 flex items-center justify-between p-4 opacity-0 group-hover:opacity-100 transition-smooth">
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={previousImage}
-            className="bg-card/80 hover:bg-card shadow-warm"
-          >
-            <ChevronLeft className="h-4 w-4" />
-          </Button>
-          <Button
-            variant="secondary"
-            size="sm"
-            onClick={nextImage}
-            className="bg-card/80 hover:bg-card shadow-warm"
-          >
-            <ChevronRight className="h-4 w-4" />
-          </Button>
-        </div>
+  {/* Navigation Buttons removed for auto-slide */}
 
         {/* Caption */}
         {images[currentIndex].caption && (
@@ -85,19 +80,7 @@ const ImageCarousel = ({ images, className, fullWidth = false, height = 'md' }: 
         )}
       </div>
 
-      {/* Dots Indicator */}
-      <div className={cn("flex justify-center space-x-2", fullWidth ? "mt-6" : "mt-4")}>
-        {images.map((_, index) => (
-          <button
-            key={index}
-            onClick={() => setCurrentIndex(index)}
-            className={cn(
-              "w-2 h-2 rounded-full transition-smooth",
-              currentIndex === index ? "bg-primary" : "bg-muted"
-            )}
-          />
-        ))}
-      </div>
+  {/* Dots Indicator removed for clean look */}
     </div>
   );
 };
