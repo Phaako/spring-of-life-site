@@ -7,6 +7,10 @@ import churchInterior from '@/assets/church-interior.jpg';
 import pastor from '@/assets/pastor-photo.jpg';
 import musah from '@/assets/musah.jpg';
 import titus from '@/assets/titus.jpg';
+import job from '@/assets/job.jpg';
+import john from '@/assets/john.jpg';
+import juliana from '@/assets/juliana.jpg';
+import mathew from '@/assets/mathew.jpg';
 
 
 const About = () => {
@@ -200,7 +204,7 @@ const About = () => {
                 </h3>
                 <p className="text-primary font-medium mb-4">Associate Pastor</p>
                 <p className="text-muted-foreground">
-                  Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
+                  Serving Spring of  life since 2015, Rev. Musah Salifu Taylor brings wisdom, 
                   compassion, and a heart for discipleship to our church family.
                 </p>
               </CardContent>
@@ -213,13 +217,70 @@ const About = () => {
                 </h3>
                 <p className="text-primary font-medium mb-4">Associate Pastor</p>
                 <p className="text-muted-foreground">
-                  Serving Spring of  life since 2015, Rev. Dr. Gideon Namyela Panka brings wisdom, 
+                  Serving Spring of  life since 2015, Ps. Titus Abaah brings wisdom, 
                   compassion, and a heart for discipleship to our church family.
                 </p>
               </CardContent>
             </Card>
             </div>
           </div>
+            <div className='flex space-x-10 '> 
+              <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-10 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={job} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Deacon. Abukari Ayuba
+                </h3>
+                <p className="text-primary font-medium mb-4">Deacon</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Deacon. Abukari Ayuba brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-10 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={john} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Deacon. John kantam
+                </h3>
+                <p className="text-primary font-medium mb-4">Deacon</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Deacon. John kantam brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            
+              <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-10 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={juliana} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Deaconess. Juliana Abilla 
+                </h3>
+                <p className="text-primary font-medium mb-4">Deacon</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Deaconess. Juliana Abilla brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="max-w-md mx-auto shadow-card transform transition duration-300 hover:scale-105 hover:shadow-xl ">
+              <CardContent className="p-10 text-center space-y-5 flex flex-col justify-center items-center">
+                <img src={mathew} className='  rounded-lg shadow-lg shadow-black flex justify-center items-center '/>
+                <h3 className="font-serif text-2xl font-semibold text-foreground mb-2">
+                  Deacon. Mathew Adua
+                </h3>
+                <p className="text-primary font-medium mb-4">Deacon</p>
+                <p className="text-muted-foreground">
+                  Serving Spring of  life since 2015, Deacon. Mathew Adua Panka brings wisdom, 
+                  compassion, and a heart for discipleship to our church family.
+                </p>
+              </CardContent>
+            </Card>
+            
+            </div>
+            
         </div>
       </section>
     </Layout>

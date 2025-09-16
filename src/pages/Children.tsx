@@ -1,4 +1,6 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
@@ -9,6 +11,10 @@ import childrenVbs from '@/assets/children-vbs.jpg';
 import childrenChristmas from '@/assets/children-christmas.jpg';
 
 const Children = () => {
+  const [activeTab, setActiveTab] = useState('');
+         const toggleTab = () => {
+          setActiveTab(activeTab === "children" ? null : "children");
+        };
   const carouselImages = [
     {
       src: childrenSundaySchool,

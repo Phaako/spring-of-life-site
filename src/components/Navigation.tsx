@@ -20,7 +20,7 @@ const Navigation = () => {
     { name: 'Departments', path: '/departments' },
     { name: 'Sermons', path: '/sermons' },
     { name: 'Events', path: '/events' },
-    { name: 'Donate', path: '/donate' },
+    { name: 'Support', path: '/donate' },
     { name: 'Contact', path: '/contact' },
   ];
 
@@ -33,12 +33,12 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
           <img src= {Aglogo} className=" w-10 text-primary/60"/>
-            
+            <img src= {Churchlogo} className=" w-10 text-primary/60"/>
             {/* <Church className="h-8 w-8 text-primary group-hover:text-primary-glow transition-smooth" /> */}
             <span className="font-serif font-bold text-xl text-foreground">
               Spring of Life AG
             </span>
-            <img src= {Churchlogo} className=" w-10 text-primary/60"/>
+            
           </Link>
 
           {/* Desktop Navigation */}

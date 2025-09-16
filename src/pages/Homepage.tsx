@@ -145,17 +145,17 @@ const Homepage = () => {
                       </h3>
                       <div className="space-y-2 text-white/90">
                         <p className="flex justify-between">
-                          <span>Abundant Sunday Service:</span>
+                          <span>Abundant Life Sunday School:</span>
                           <span className="font-medium">9:00 AM</span>
                         </p>
                         <p className="flex justify-between">
-                          <span>Abundant Word Hour:</span>
-                          <span className="font-medium">7:00 PM</span>
+                          <span>Abundant Life Service:</span>
+                          <span className="font-medium">10:00 AM</span>
                         </p>
-                        <p className="flex justify-between">
+                        {/* <p className="flex justify-between">
                           <span>Abundant Prayer hour:</span>
                           <span className="font-medium">7:00 PM</span>
-                        </p>
+                        </p> */}
                       </div>
                     </div>
                   </div>

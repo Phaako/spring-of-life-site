@@ -8,7 +8,7 @@ const Events = () => {
   const upcomingEvents = [
     {
       title: "Christmas Eve Service",
-      date: "December 24, 2024",
+      date: "December 24, 2025",
       time: "6:00 PM & 8:00 PM",
       location: "Main Sanctuary",
       description: "Join us for a beautiful candlelight service celebrating the birth of our Savior. This family-friendly service will include carols, scripture readings, and a message of hope.",
@@ -17,9 +17,9 @@ const Events = () => {
       featured: true
     },
     {
-      title: "New Year Prayer & Fasting",
-      date: "January 1-7, 2025",
-      time: "Various Times",
+      title: "Annual Harvest",
+      date: "October 26, 2025",
+      time: "9:00 AM",
       location: "Church & Online",
       description: "Start the new year seeking God's direction through prayer and fasting. Daily prayer meetings and resources provided.",
       image: "/placeholder.svg",

@@ -1,15 +1,19 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import Layout from '@/components/Layout';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Book, Coffee, Heart, Calendar } from 'lucide-react';
-import womenMinistry from '@/assets/women-ministry.jpg';
-import womenRetreat from '@/assets/women-retreat.jpg';
-import womenConference from '@/assets/women-conference.jpg';
-import womenService from '@/assets/women-service.jpg';
+import womenMinistry from '@/assets/women.jpg';
+import womenRetreat from '@/assets/women2.jpg';
 
 const Women = () => {
+  const [activeTab, setActiveTab] = useState('');
+       const toggleTab = () => {
+        setActiveTab(activeTab === "women" ? null : "women");
+      };
   const carouselImages = [
     {
       src: womenMinistry,
@@ -20,17 +24,17 @@ const Women = () => {
       src: womenRetreat,
       alt: "Women's Retreat",
       caption: "Annual women's retreat - A time of renewal and spiritual refreshment"
-    },
-    {
-      src: womenConference,
-      alt: "Women's Conference", 
-      caption: "Inspiring conferences with guest speakers and worship"
-    },
-    {
-      src: womenService,
-      alt: "Community Service",
-      caption: "Women serving in the community - Making a difference together"
     }
+    // {
+    //   src: womenConference,
+    //   alt: "Women's Conference", 
+    //   caption: "Inspiring conferences with guest speakers and worship"
+    // },
+    // {
+    //   src: womenService,
+    //   alt: "Community Service",
+    //   caption: "Women serving in the community - Making a difference together"
+    // }
   ];
 
   const programs = [
