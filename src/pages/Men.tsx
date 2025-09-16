@@ -1,19 +1,26 @@
-import React from 'react';
+// import React from 'react';
+import React, { useState } from 'react';
 import Layout from '@/components/Layout';
 import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Shield, Hammer, Users, Trophy } from 'lucide-react';
-import menMinistry from '@/assets/men-ministry.jpg';
-import menConstruction from '@/assets/men-construction.jpg';
-import menRetreat from '@/assets/men-retreat.jpg';
+import menMinistry from '@/assets/men3.jpg';
+import menConstruction from '@/assets/men.jpg';
+import menRetreat from '@/assets/men2.jpg';
+import men4 from '@/assets/men4.jpg';
+import { Link } from 'react-router-dom';
 
 const Men = () => {
+   const [activeTab, setActiveTab] = useState('');
+     const toggleTab = () => {
+      setActiveTab(activeTab === "men" ? null : "men");
+    };
   const carouselImages = [
     {
       src: menMinistry,
       alt: "Men's Fellowship BBQ",
-      caption: "Men's BBQ fellowship - Building brotherhood over good food and conversation"
+      caption: "Building brotherhood over good conversation"
     },
     {
       src: menConstruction,
@@ -23,7 +30,12 @@ const Men = () => {
     {
       src: menRetreat,
       alt: "Men's Wilderness Retreat", 
-      caption: "Annual men's retreat - Growing closer to God and each other in nature"
+      caption: "Growing closer to God and each other in nature"
+    },
+    {
+      src: men4,
+      alt: "Short meeting after a sunday service",
+      caption:"Short meeting after a sunday service"
     }
   ];
 
