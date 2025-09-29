@@ -17,6 +17,11 @@ import A2 from '../assets/A2.jpg';
 import A3 from '../assets/A3.jpg';
 import A4 from '../assets/A4.jpg';
 import A5 from '../assets/A5.jpg';
+import A6 from '../assets/A6.jpg';
+import A7 from '../assets/A7.jpg';
+import A8 from '../assets/A8.jpg';
+import A9 from '../assets/A9.jpg';
+import A10 from '../assets/A10.jpg';
 
 
 
@@ -73,6 +78,26 @@ const About = () => {
     },
     {
       src: A5,
+      alt: "auditorium",
+    },
+    {
+      src: A6,
+      alt: "auditorium",
+    },
+    {
+      src: A7,
+      alt: "auditorium",
+    },
+    {
+      src: A8,
+      alt: "auditorium",
+    },
+    {
+      src: A9,
+      alt: "auditorium",
+    },
+    {
+      src: A10,
       alt: "auditorium",
     },
   ];
