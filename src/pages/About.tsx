@@ -4,6 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Users, Heart, Book, Globe, HandHelpingIcon} from 'lucide-react';
 import { HandsPrayingIcon } from '@phosphor-icons/react';
 import churchInterior from '@/assets/church-interior.jpg';
+import ImageCarousel from '@/components/ImageCarousel';
 import pastor from '@/assets/pastor-photo.jpg';
 import musah from '@/assets/musah.jpg';
 import titus from '@/assets/titus.jpg';
@@ -11,6 +12,12 @@ import job from '@/assets/job.jpg';
 import john from '@/assets/john.jpg';
 import juliana from '@/assets/juliana.jpg';
 import mathew from '@/assets/mathew.jpg';
+import A1 from '../assets/A1.jpg';
+import A2 from '../assets/A2.jpg';
+import A3 from '../assets/A3.jpg';
+import A4 from '../assets/A4.jpg';
+import A5 from '../assets/A5.jpg';
+
 
 
 const About = () => {
@@ -47,6 +54,29 @@ const About = () => {
     }
   ];
 
+  const carouselImages = [
+    {
+      src: A1,
+      alt: "auditorium",
+    },
+    {
+      src: A2,
+      alt: "auditorium",
+    },
+    {
+      src: A3,
+      alt: "auditorium",
+    },
+    {
+      src: A4,
+      alt: "auditorium",
+    },
+    {
+      src: A5,
+      alt: "auditorium",
+    },
+  ];
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -63,16 +93,21 @@ const About = () => {
 
       {/* Church Interior Image */}
       <section className="py-20 bg-muted/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-lg overflow-hidden shadow-warm animate-fade-in">
-            <img
-              src={churchInterior}
-              alt="Grace Community Church Interior"
-              className="w-full h-96 object-cover"
-            />
-          </div>
-        </div>
-      </section>
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="rounded-lg overflow-hidden shadow-warm animate-fade-in relative">
+      {/* Image Carousel */}
+      <ImageCarousel
+        images={carouselImages}
+        alt="Grace Community Church Interior"
+        className="w-full h-[88vh] object-cover"
+      />
+
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/50"></div>
+    </div>
+  </div>
+</section>
+
 
       {/* Our Story */}
       <section className="py-20 bg-background">
