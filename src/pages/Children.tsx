@@ -6,9 +6,11 @@ import ImageCarousel from '@/components/ImageCarousel';
 import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Book, Star, Gift, Heart, Shield } from 'lucide-react';
-import childrenSundaySchool from '@/assets/children-sunday-school.jpg';
-import childrenVbs from '@/assets/children-vbs.jpg';
-import childrenChristmas from '@/assets/children-christmas.jpg';
+import childrenSundaySchool from '@/assets/children.jpg';
+import childrenVbs from '@/assets/children2.jpg';
+import childrenChristmas from '@/assets/children4.jpg';
+import children5 from '@/assets/children5.jpg';
+import children6 from '@/assets/children6.jpg';
 
 const Children = () => {
   const [activeTab, setActiveTab] = useState('');
@@ -30,6 +32,11 @@ const Children = () => {
       src: childrenChristmas,
       alt: "Children's Christmas Program",
       caption: "Christmas pageant - Children sharing the joy of Jesus' birth"
+    },
+    {
+      src: children5,
+      alt: "sundau school",
+      caption: "Sunday School"
     }
   ];
 
